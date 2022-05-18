@@ -1,0 +1,89 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["airbnb", "plugin:import/errors", "plugin:import/warnings", "plugin:@typescript-eslint/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "ignorePatterns": ["*.config.js", "**/scripts/*.ts", "**/scripts/*.js", "**/config/*"],
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "react/jsx-fragments": ["error", "element"],
+    "react/no-array-index-key": "off",
+    "arrow-parens": ["error", "as-needed"],
+    "react/react-in-jsx-scope": [2],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "react/jsx-boolean-value": "error",
+    "no-underscore-dangle": "off",
+    "react/jsx-sort-default-props": "off",
+    "react/jsx-sort-props": "off",
+    "max-len": ["error", { "code": 140, "ignoreStrings": true, "ignoreTemplateLiterals": true }],
+    "max-lines": ["error", 350],
+    "no-alert": "off",
+    "react/no-danger": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/jsx-no-bind": "off",
+    "react/destructuring-assignment": "off",
+    "react/forbid-prop-types": "off",
+    "react/no-unused-prop-types": "off",
+    "react/default-props-match-prop-types": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "class-methods-use-this": "off",
+    "semi": ["error", "never"],
+    "jsx-quotes": ["error", "prefer-single"],
+    "react/jsx-child-element-spacing": "error",
+    "react/jsx-curly-brace-presence": ["error", { "props": "never", "children": "never" }],
+    "react/jsx-max-depth": [2, { "max": 6 }],
+    "react/jsx-max-props-per-line": [1, { "maximum": 1 }],
+    "react/jsx-props-no-spreading": [1, { "html": "enforce" }],
+    "react/jsx-newline": [2, { "prevent": true }],
+    "react/jsx-wrap-multilines": [
+      2,
+      {
+        "declaration": "parens",
+        "assignment": "parens",
+        "return": "parens",
+        "arrow": "parens",
+        "condition": "ignore",
+        "logical": "ignore",
+        "prop": "ignore"
+      }
+    ],
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "camelcase": 0,
+    "object-curly-newline": [
+      "error",
+      {
+        "ObjectExpression": { "multiline": true, "minProperties": 5 },
+        "ObjectPattern": { "multiline": true, "minProperties": 5 },
+        "ImportDeclaration": { "multiline": false, "minProperties": 5 },
+        "ExportDeclaration": "never"
+      }
+    ],
+    "import/prefer-default-export": 0,
+    "import/extensions": ["error", "never", { "svg": "always", "style": "always" }],
+    "import/no-unresolved": 0,
+    "import/no-extraneous-dependencies": 0,
+    "no-shadow": 0,
+    "react/prop-types": 0,
+    "react/require-default-props": 0,
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/no-unused-state": "off",
+    "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
+    "react/no-unescaped-entities": 0,
+    "no-param-reassign": 0,
+    "implicit-arrow-linebreak": 0,
+    "jsx-a11y/control-has-associated-label": 0
+  }
+}
